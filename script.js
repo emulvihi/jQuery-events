@@ -26,9 +26,25 @@ $(document).ready(function() {
    $("h2").hover(function() {
         $("h2:hover").addClass('font-size-h2');
    });
-   $(".bottom_button").hover(function() {
-        $("body").addClass('button-background');
-   }, function() {
-        $("body").removeClass('button-background');
+   $(".bottom_button").mouseenter(function() {
+        $(".bottom_button").removeClass("makeRed").addClass("makeBorder");
+   });
+   $(".bottom_button").mouseleave(function() {
+        $(".bottom_button").addClass("makeRed").removeClass("makeBorder");
+   });
+   $(".card_image").click(function() {
+        $(".card_image").next().next().slideDown("slow");
+   });
+   $("p").click(function() {
+       $("p").children("a").addClass("makeYellow");
+   });
+   $(".card").click(function() {
+       $(this).toggleClass("makePink");
+   });
+   $("#select_btn").on("click", function() {
+       $(".card:not(.makePink)").hide("fast");
+   });
+   $("#all_btn").on("click", function() {
+       $(".card").show("fast");
    });
 }); 

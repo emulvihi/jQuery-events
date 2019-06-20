@@ -18,6 +18,7 @@ h2 {
 
 p {
 	font-size: .9rem;
+	display: none;
 }
 
 div {
@@ -170,4 +171,20 @@ li {
 
 .button-background {
     background-color: black;
+}
+
+.makeRed {
+	background-color: red;
+}
+
+.makeBorder {
+	border: 2px solid #fafafa;
+}
+
+.makeYellow {
+	color: yellow;
+}
+
+.makePink {
+	background-color: pink;
 }
